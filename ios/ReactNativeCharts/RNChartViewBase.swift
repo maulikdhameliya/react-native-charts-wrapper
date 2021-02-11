@@ -420,6 +420,7 @@ open class RNChartViewBase: UIView, ChartViewDelegate {
               axis.valueFormatter = CustomChartDateFormatter(pattern: valueFormatterPattern, since: since, timeUnit: timeUnit, locale: locale);
             } else {
               let customFormatter = NumberFormatter()
+              customFormatter.locale = Locale(identifier: "en_US")
               customFormatter.positiveFormat = valueFormatter.stringValue
               customFormatter.negativeFormat = valueFormatter.stringValue
 
